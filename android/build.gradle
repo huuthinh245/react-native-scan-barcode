@@ -29,13 +29,13 @@ android {
   compileSdkVersion getExtOrIntegerDefault('compileSdkVersion')
   buildToolsVersion getExtOrDefault('buildToolsVersion')
   defaultConfig {
-    minSdkVersion 16
+    minSdkVersion 21
     targetSdkVersion getExtOrIntegerDefault('targetSdkVersion')
     versionCode 1
     versionName "1.0"
-    
+
   }
-  
+
   buildTypes {
     release {
       minifyEnabled false
@@ -127,4 +127,18 @@ dependencies {
   // noinspection GradleDynamicVersion
   api 'com.facebook.react:react-native:+'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+  implementation 'com.squareup.picasso:picasso:+'
+
+  def camerax_version = '1.0.0-rc01'
+  implementation "androidx.camera:camera-core:$camerax_version"
+
+  // CameraX Camera2 extensions
+  implementation "androidx.camera:camera-camera2:$camerax_version"
+
+  // CameraX Lifecycle library
+  implementation "androidx.camera:camera-lifecycle:$camerax_version"
+
+  // CameraX View class
+  implementation 'androidx.camera:camera-view:1.0.0-alpha20'
+  implementation 'com.google.zxing:core:3.4.1'
 }

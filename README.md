@@ -11,11 +11,15 @@ npm install react-native-scanner
 ## Usage
 
 ```js
-import Scanner from "react-native-scanner";
+import ScannerViewManager from 'react-native-scanner';
 
 // ...
 
-const result = await Scanner.multiply(3, 7);
+<ScannerViewManager 
+    color="#32a852" style={styles.box} 
+    scanBarcode
+    showFrame
+    />
 ```
 
 ## Contributing
